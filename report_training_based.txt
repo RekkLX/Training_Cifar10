@@ -1,0 +1,39 @@
+Title: Fine-Tuning a Pretrained ResNet-18 Model on CIFAR-10
+
+1. Objective
+The objective of this experiment is to fine-tune a pretrained ResNet-18 model on the CIFAR-10 dataset in order to study the effectiveness of transfer learning in image classification tasks.
+
+2. Dataset Description
+The CIFAR-10 dataset consists of 60,000 color images of size 32×32 pixels divided into 10 different classes. The dataset contains 50,000 training images and 10,000 testing images. All images were normalized before training.
+
+3. Model Description
+In this experiment, the ResNet-18 model pretrained on the ImageNet dataset was used. The pretrained model already contains learned low-level and mid-level image features. The final fully connected layer of the model was modified to output 10 classes corresponding to the CIFAR-10 dataset.
+
+4. Methodology
+The following steps were performed:
+- Imported required PyTorch and torchvision libraries.
+- Loaded the CIFAR-10 dataset using torchvision.
+- Applied normalization to the images.
+- Loaded the pretrained ResNet-18 model.
+- Modified the final fully connected layer.
+- Trained the model using backpropagation.
+- Evaluated the model on test data.
+
+5. Training Details
+Loss Function: Cross Entropy Loss  
+Optimizer: Adam  
+Learning Rate: 0.001  
+Batch Size: 64  
+Number of Epochs: 10  
+
+6. Results
+The model showed steady improvement in training accuracy over epochs. The use of pretrained weights allowed faster convergence and better performance compared to training a model from scratch.
+
+7. Analysis
+Transfer learning enabled the model to reuse learned visual features such as edges and shapes. This reduced training time and improved accuracy on the CIFAR-10 dataset.
+
+8. Limitations and Failure Cases
+Some misclassifications occurred between visually similar classes such as cats and dogs, indicating overlapping visual features.
+
+9. Conclusion
+The experiment demonstrates that fine-tuning a pretrained ResNet-18 model significantly improves classification performance and training efficiency. Transfer learning proves to be an effective approach for image classification tasks with limited data.
