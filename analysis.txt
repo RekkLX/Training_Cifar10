@@ -1,0 +1,40 @@
+Title: Neural Network Based Breast Cancer Classification
+
+1. Objective
+The objective of this experiment is to design and train a simple neural network model to classify breast cancer data into malignant and benign categories.
+
+2. Dataset Description
+The Breast Cancer dataset was obtained from an online source and loaded using pandas. The dataset contains several numerical features computed from digitized images of breast tissue. Irrelevant columns such as ID and unnamed attributes were removed before training.
+
+3. Data Preprocessing
+The dataset was preprocessed as follows:
+- Removed unnecessary columns.
+- Separated features (X) and target labels (y).
+- Split the data into training and testing sets using an 80:20 ratio.
+- Applied feature scaling using StandardScaler.
+- Encoded categorical labels into numerical form using LabelEncoder.
+- Converted data into PyTorch tensors for model training.
+
+4. Model Description
+A custom neural network model was implemented using PyTorch. The network consists of fully connected layers and uses a forward propagation method to generate predictions.
+
+5. Training Details
+Learning Rate: 0.01  
+Number of Epochs: 20  
+Loss Function: Binary classification loss  
+Framework: PyTorch  
+
+6. Methodology
+The model was trained on the training dataset using forward propagation. During training, predictions were generated and model parameters were updated iteratively. After training, the model was evaluated on the test dataset.
+
+7. Results
+The trained neural network was able to classify breast cancer samples with reasonable accuracy. Predictions were thresholded at 0.5 to determine class labels.
+
+8. Analysis
+Feature scaling significantly improved training stability. Using a neural network allowed the model to learn complex relationships between input features and target labels.
+
+9. Limitations
+The model architecture is simple and may not capture all complex patterns in the data. Increasing the number of layers or neurons could improve performance.
+
+10. Conclusion
+This experiment demonstrates that a neural network can be effectively used for binary classification problems such as breast cancer detection. Proper preprocessing and scaling play a crucial role in achieving good performance.
